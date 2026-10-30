@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#455648">
+  <meta name="description" content="Rangkai cerita cinta menjadi undangan pernikahan yang personal. Pilih tema, foto, musik, dan animasi di Everafter Studio.">
+  <title>Everafter — Wedding Website Studio</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" type="module"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#studio" aria-label="Everafter Studio"><span class="brand-symbol" aria-hidden="true">✳</span><span>everafter<span class="brand-dot">.</span><small>WEDDING WEBSITE STUDIO</small></span></a>
+    <nav class="top-nav" aria-label="Navigasi utama"><button class="nav-link active" data-nav="studio">Studio <span class="tiny-dot"></span></button><button class="nav-link" data-nav="templates">Koleksi template</button><button class="nav-link" data-action="guide">Cara kerja</button></nav>
+    <div class="header-right"><span class="save-status" id="save-status" role="status"><span></span> Disimpan di perangkat</span><button class="avatar" data-action="projects" aria-label="Undangan saya">K</button></div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="tool-rail" aria-label="Pengaturan undangan"><div class="rail-tools" id="rail-tools"></div><button class="rail-button rail-help" data-action="guide" aria-label="Bantuan"><span data-icon="help"></span><span>Bantuan</span></button></aside>
+    <main class="main-workspace" id="studio">
+      <div class="workspace-intro"><div><div class="eyebrow"><span></span> MADE FOR YOUR FOREVER</div><h1>Setiap cerita cinta <em>itu istimewa.</em></h1><p>Jadikan undangan kalian seindah kisah yang akan dimulai.</p></div><div class="workspace-actions"><button class="button button-light" data-action="preview"><span data-icon="eye"></span>Pratinjau</button><button class="button button-primary" data-action="export">Ekspor website<span data-icon="arrow-up-right"></span></button></div></div>
+
+      <div class="studio-layout">
+        <section class="editor-panel" aria-label="Editor undangan"><div class="editor-heading"><div><span class="step-eyebrow" id="step-number">LANGKAH 01 / 05</span><h2 id="panel-title">Pilih suasana kalian</h2><p id="panel-description">Awal yang indah untuk cerita selamanya.</p></div><span class="panel-sparkle" aria-hidden="true">✧</span></div><div id="panel-content" class="panel-content"></div><div class="editor-footer"><span data-icon="sparkles"></span> Sentuhan kecil. Kenangan selamanya.</div></section>
+
+        <section class="preview-area" aria-label="Pratinjau langsung undangan"><div class="preview-toolbar"><div class="live-label"><span></span> PRATINJAU LANGSUNG</div><div class="device-controls" role="group" aria-label="Ukuran pratinjau"><button data-device="desktop" class="selected" aria-label="Pratinjau desktop" aria-pressed="true"><span data-icon="monitor"></span></button><button data-device="mobile" aria-label="Pratinjau ponsel" aria-pressed="false"><span data-icon="smartphone"></span></button></div><button class="icon-button" data-action="preview" aria-label="Perbesar pratinjau"><span data-icon="expand"></span></button></div>
+          <div class="preview-viewport" id="preview-viewport"><div class="browser-frame" id="browser-frame"><div class="browser-chrome"><div class="browser-dots"><i></i><i></i><i></i></div><span id="preview-address"><span data-icon="lock"></span> undangan / nadia-dan-arya</span><span data-icon="rotate"></span></div><iframe id="invitation-frame" title="Pratinjau undangan pernikahan" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-downloads"></iframe></div></div>
+          <div class="preview-bottom"><span><span data-icon="mouse"></span> Gulir di dalam undangan untuk menjelajahi</span><span>Dirangkai dengan cinta <span class="little-heart">♡</span></span></div>
+        </section>
+      </div>
+      <div class="workspace-bottom"><span><span data-icon="shield-check"></span> Cerita kalian tersimpan otomatis di browser ini.</span><button data-action="guide">Butuh inspirasi? <span data-icon="arrow-right"></span></button></div>
+    </main>
+    <main class="template-page" id="templates-page" hidden></main>
+  </div>
+  <dialog id="app-dialog" class="app-dialog"><div id="dialog-content"></div></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <input type="file" id="cover-upload" accept="image/jpeg,image/png,image/webp" hidden>
+  <input type="file" id="gallery-upload" accept="image/jpeg,image/png,image/webp" multiple hidden>
+  <input type="file" id="music-upload" accept="audio/*" hidden>
+  <input type="file" id="project-import" accept="application/json,.json" hidden>
+</body>
+</html>
